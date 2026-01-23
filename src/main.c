@@ -1,18 +1,26 @@
 #include <stdio.h>
 
+int is_even(int num);
+
 int main() {
-    float lado, area, volumen;
+    int numero;
 
-    printf("Ingresa la longitud del lado: ");
-    scanf("%f", &lado);
+    printf("Ingrese un numero: ");
+    scanf("%d", &numero);
 
-    area = lado * lado;
-    volumen = lado * lado * lado;
+    if (is_even(numero)) {
+        printf("El numero es par\n");
+    } else {
+        printf("El numero es impar\n");
+    }
 
-    printf("El area del cuadrado es: %.2f\n", area);
-    printf("El volumen del cubo es: %.2f\n", volumen);
-
-    return 0;
+    return 0; 
 }
-//
 
+int is_even(int num) {
+    if (num % 2 == 0) {
+        return 1; // Es par
+    } else {
+        return 0; // Es impar
+    }
+}
